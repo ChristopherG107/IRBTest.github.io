@@ -63,7 +63,7 @@ function CopyToClip(){
         
 • Link to the game: 
 • Extra information: Have fun, make friends!
-@Imperial Enlisted`)
+<@&865445689035325451>`)
         }else{
             navigator.clipboard.writeText(`• Event type: IRB Gamenight | 
 • Hosted by: <@${HostID}>
@@ -73,7 +73,7 @@ function CopyToClip(){
         
 • Link to the game: 
 • Extra information: Have fun, make friends!
-@Imperial Enlisted`)
+<@&865445689035325451>`)
         }
     }
 }
