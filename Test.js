@@ -1,3 +1,40 @@
+//Test Code
+
+let MembersTab = { 
+    
+    A_Dumbledore:{
+        Name: "A_Dumbledore",
+        ID: "936411927473713223",
+        IRB: true,
+        Rank: "Agent"
+    },
+    Vlbekingg:{
+        Name: "Vlbekingg",
+        ID: "774967485916250123",
+        IRB: true,
+        Rank: "Senior Agent"
+    },
+    icedragonXDX:{
+        Name: "icedragonXDX",
+        ID: "1015449238328590436",
+        IRB: false,
+        Rank: "Intern"
+    },
+    None:{
+        Name: "N/A",
+        ID: "N/A",
+        IRB: false,
+        Rank: "Senior Agent"
+    }
+}
+
+
+
+let JSON_MembersTab = JSON.stringify(MembersTab);
+localStorage.setItem("Members", JSON_MembersTab)
+//End of Test
+
+
 let TestList = JSON.parse(localStorage.getItem("Members"))
 
 let HostID = null
@@ -79,38 +116,3 @@ function UserC() {
     navigator.clipboard.writeText("<@774967485916250123>");
 }
 
-//Test Code
-
-let MembersTab = { 
-    
-    A_Dumbledore:{
-        Name: "A_Dumbledore",
-        ID: "936411927473713223",
-        IRB: true,
-        Rank: "Agent"
-    },
-    Vlbekingg:{
-        Name: "Vlbekingg",
-        ID: "774967485916250123",
-        IRB: true,
-        Rank: "Senior Agent"
-    },
-    icedragonXDX:{
-        Name: "icedragonXDX",
-        ID: "1015449238328590436",
-        IRB: false,
-        Rank: "Intern"
-    },
-    None:{
-        Name: "N/A",
-        ID: "N/A",
-        IRB: false,
-        Rank: "Senior Agent"
-    }
-}
-
-
-
-let JSON_MembersTab = JSON.stringify(MembersTab);
-localStorage.setItem("Members", JSON_MembersTab)
-//End of Test
