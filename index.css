@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+body{
+    background-image: url(Picture/background\ \(2\).jpg);
+    background-size: cover;
+}
+
+h1{
+    margin: auto;
+    width: 50%;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 43px;
+}
+
+.select-template{
+    width: 90%;
+    height: 30px;
+    border-radius: 20px;
+    margin: auto;
+    background-color: rgba(31, 29, 29, 70%);
+    color: white;
+}
+
 .dropdown{
     position: relative;
     display: inline-block;
