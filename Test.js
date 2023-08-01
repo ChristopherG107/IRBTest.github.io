@@ -34,6 +34,9 @@ let JSON_MembersTab = JSON.stringify(MembersTab);
 localStorage.setItem("Members", JSON_MembersTab)
 //End of Test
 
+function Test(){
+    console.log("Testing")
+}
 
 let TestList = JSON.parse(localStorage.getItem("Members"))
 

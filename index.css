@@ -15,11 +15,58 @@ h1{
 
 .select-template{
     width: 90%;
-    height: 30px;
+    height: 40px;
     border-radius: 20px;
     margin: auto;
     background-color: rgba(31, 29, 29, 70%);
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-template > button{
+    margin: 10%;
+    width: 150px;
+    height: 28px;
+    background-color: rgba(1, 1, 1, 0);
+    color: gray;
+    border-style: none;
+    transition: color, 1s;
+    display: block;
+}
+
+.select-template > button > div{
+    width: 10%;
+    height: 3px;
+    border-radius: 30px;
+    background-color: rgba(75, 74, 74, 0);
+    margin: auto;
+    margin-top: 5px;
+    visibility: hidden;
+    
+}
+
+#gns:hover,#gnp:hover,#gnl:hover{
+    color: white;
+    transition: color, 1s;
+}
+
+#gns:hover > div, #gnp:hover > div, #gnl:hover > div{
+    visibility: visible;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 100);
+    transition: visibility, 1s;
+}
+
+#gns:active, #gnl:active, #gnp:active{
+    color: rgb(102, 102, 102);
+    transition: color, .25s;
+}
+
+#gns:active > div, #gnp:active > div, #gnl:active > div{
+    background-color: rgba(75, 74, 74, 100);
+    transition: background-color, .25s;
 }
 
 .dropdown{
