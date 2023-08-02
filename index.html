@@ -10,24 +10,41 @@
     <h1>The Galactic Empire: Imperial Relations Bureau</h1>
 
     <div class="select-template">
-        <button id="gns" onclick="Test()">Gamenight: Shout<div class="Test"></div></button>
-        <button id="gnp">Gamenight: Post <div class="Drop"></div></button>
-        <button id="gnl">Gamenight: Log <div></div></button>
+        <button id="gns" onclick="LoadShout()">Gamenight: Shout<div></div></button>
+        <button id="gnp" onclick="LoadPost()">Gamenight: Post <div></div></button>
+        <button id="gnl" onclick="LoadLog()">Gamenight: Log <div></div></button>
     </div>
 
-    <div class="dropdown">
-        <button class="dropbtn" id="host">Select host.</button>
-        <div class="dropdown-content" id="a">
+    <div class="Holder">
+        <div class="CopyPastetemp">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="line5"></div>
+            <div id="line6"></div>
+            <div id="line7"></div>
+            <div id="line8"></div>
+            <div id="line9"></div>
         </div>
-    </div>
+    
+        <div class="SelectionZone">
+            <div class="dropdown">
+                <button class="dropbtn" id="host">Select host.</button>
+                <div class="dropdown-content" id="a">
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropbtn" id="cohost">Select Co-host.</button>
+                <div class="dropdown-content" id="b">
+                </div>
+            </div>
 
-    <div class="dropdown">
-        <button class="dropbtn" id="cohost">Select Co-host.</button>
-        <div class="dropdown-content" id="b">
+            <p>Link: (Text Box)</p>
+            <button onclick="CopyToClip()">Copy to clipboard.</button>
         </div>
     </div>
-    <p>Link: (Text Box)</p>
-    <button onclick="CopyToClip()">Copy to clipboard.</button>
     <script src="Test.js"></script>
 </body>
 </html>

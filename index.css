@@ -49,14 +49,14 @@ h1{
 
 #gns:hover,#gnp:hover,#gnl:hover{
     color: white;
-    transition: color, 1s;
+    transition: color, .5s;
 }
 
 #gns:hover > div, #gnp:hover > div, #gnl:hover > div{
     visibility: visible;
     width: 100%;
     background-color: rgba(255, 255, 255, 100);
-    transition: visibility, 1s;
+    transition: visibility, .5s;
 }
 
 #gns:active, #gnl:active, #gnp:active{
@@ -68,6 +68,42 @@ h1{
     background-color: rgba(75, 74, 74, 100);
     transition: background-color, .25s;
 }
+
+.Holder{
+    display: flex;
+}
+
+.CopyPastetemp{
+    height: 300px;
+    width: 38%;
+    margin-left: 5%;
+    margin-top: 2%;
+    background-color: rgba(48, 48, 48, 0.6);
+    border-radius: 10%;
+    color: white;
+
+}
+
+.CopyPastetemp > div{
+    font-family:sans-serif;
+    font-weight: bold;
+    width: 60%;
+    margin: auto;
+    height: 20px;
+    padding-top: 12px;
+}
+
+.SelectionZone{
+    height: 300px;
+    width: 38%;
+    margin-left: 5%;
+    margin-top: 2%;
+    background-color: rgba(48, 48, 48, 0.6);
+    border-radius: 10%;
+    color: white;
+}
+
+
 
 .dropdown{
     position: relative;

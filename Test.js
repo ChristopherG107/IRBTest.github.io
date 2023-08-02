@@ -34,8 +34,64 @@ let JSON_MembersTab = JSON.stringify(MembersTab);
 localStorage.setItem("Members", JSON_MembersTab)
 //End of Test
 
-function Test(){
-    console.log("Testing")
+function LoadShout(){
+    let lineOne = document.querySelector("#line1");
+    let lineTwo = document.querySelector("#line2");
+    let lineThree = document.querySelector("#line3");
+    let lineFour = document.querySelector("#line4");
+    let lineFive = document.querySelector("#line5");
+    let lineSix = document.querySelector("#line6");
+
+    lineOne.innerHTML = "Game: "
+    lineTwo.innerHTML = "Host: "
+    lineThree.innerHTML = "Ling: "
+    lineFour.innerHTML = "Ping: @Gamenight Engagement Team"
+    lineFive.innerHTML = "Post: @Commissioned Agent"
+    lineSix.innerHTML = "Notes: I Require 2 Co-hosts"
+}
+
+function LoadPost(){
+    let lineOne = document.querySelector("#line1");
+    let lineTwo = document.querySelector("#line2");
+    let lineThree = document.querySelector("#line3");
+    let lineFour = document.querySelector("#line4");
+    let lineFive = document.querySelector("#line5");
+    let lineSix = document.querySelector("#line6");
+    let lineSeven = document.querySelector("#line7");
+    let lineEight = document.querySelector("#line8");
+    let lineNine = document.querySelector("#line9");
+
+    lineOne.innerHTML = "• Event type: IRB Gamenight | "
+    lineTwo.innerHTML = "• Hosted by: "
+    lineThree.innerHTML = "• Co-hosted by: "
+    lineFour.innerHTML = "• Supervised by: "
+    lineFive.innerHTML = "• Starts at: When enough people join"
+    lineSix.innerHTML = ""
+    lineSeven.innerHTML = "• Link to the game: "
+    lineEight.innerHTML = "• Extra information: Have fun, make friends!"
+    lineNine.innerHTML = "@Imperial Enlisted "
+}
+
+function LoadLog(){
+    let lineOne = document.querySelector("#line1");
+    let lineTwo = document.querySelector("#line2");
+    let lineThree = document.querySelector("#line3");
+    let lineFour = document.querySelector("#line4");
+    let lineFive = document.querySelector("#line5");
+    let lineSix = document.querySelector("#line6");
+    let lineSeven = document.querySelector("#line7");
+
+    lineOne.innerHTML = "Game: "
+    lineTwo.innerHTML = "Host: "
+    lineThree.innerHTML = "Co-host: "
+    lineFour.innerHTML = "Supervisor: "
+    lineFive.innerHTML = "Starting number of attendees: "
+    lineSix.innerHTML = "Final number of attendees: "
+    lineSeven.innerHTML = "Proof:"
+}
+
+function Test(x){
+    console.log("Testing"+x)
 }
 
 let TestList = JSON.parse(localStorage.getItem("Members"))
