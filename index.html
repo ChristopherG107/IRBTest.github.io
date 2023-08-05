@@ -9,35 +9,37 @@
 <body>
     <div class="title"> <a id="Bold">IRB:&nbsp</a>Gamenight Engagement Team</div>
     <div class="inner-website">
-        <div class="preview-holder">
-            <div class="phaseone">
-                <button onclick="DisplayP2()" class="P1Shout">Shout</button>
-                <button>Post</button>
-                <button>Log</button>
-            </div>
-            <div class="phasetwo" id="P2">
-                <p>Host: <a class="hosttext" id="HostUser"></a></p>
-                <button class="HostSelectButton">Select Host</button>
-            </div>
-            <div class="phasethree" id="opt1">
-                <p>Co-Host: <button class="Cohosttext1" id="CoHostUserA" onclick="RemoveCO('A')"></button><button class="Cohosttext2" id="CoHostUserB" onclick="RemoveCO('B')"></button></p>
-                <button class="CoHostSelectButton">Select Co-Host</button>
-            </div>
-            <div class="SupervisorPhase" id="opt2">
-                <p>Supervisor: <button class="supbut" id="SupUser" onclick="RemoveCO('C')"></button></p>
-                <button class="SupSelectButton">Select Supervisor</button>
-            </div>
-            <div class="phasefour" id="P4">
-                <p>Game Name:</p>
-                <input type="text" id="gameName" placeholder="Enter the game Name"> 
-            </div>
-            <div class="phasefive" id="P5">
-                <p>Game Link:</p>
-                <input type="text" id="gameLink" placeholder="Enter the game Link"> 
-            </div>
-            <div class="Notes" id="Note">
-                <p>Notes:</p>
-                <input type="text" id="Notesinput" placeholder="Place any notes here."> 
+        <div class="ExtraSpace">
+            <div class="preview-holder">
+                <div class="phaseone">
+                    <button onclick="DisplayP2()" class="P1Shout">Shout</button>
+                    <button onclick="PostP2()" class="P1Post">Post</button>
+                    <button>Log</button>
+                </div>
+                <div class="phasetwo" id="P2">
+                    <p>Host: <a class="hosttext" id="HostUser"></a></p>
+                    <button class="HostSelectButton">Select Host</button>
+                </div>
+                <div class="phasethree" id="opt1">
+                    <p>Co-Host: <button class="Cohosttext1" id="CoHostUserA" onclick="RemoveCO('A')"></button><button class="Cohosttext2" id="CoHostUserB" onclick="RemoveCO('B')"></button></p>
+                    <button class="CoHostSelectButton">Select Co-Host</button>
+                </div>
+                <div class="SupervisorPhase" id="opt2">
+                    <p>Supervisor: <button class="supbut" id="SupUser" onclick="RemoveCO('C')"></button></p>
+                    <button class="SupSelectButton">Select Supervisor</button>
+                </div>
+                <div class="phasefour" id="P4">
+                    <p>Game Name:</p>
+                    <input type="text" id="gameName" placeholder="Enter the game Name"> 
+                </div>
+                <div class="phasefive" id="P5">
+                    <p>Game Link:</p>
+                    <input type="text" id="gameLink" placeholder="Enter the game Link"> 
+                </div>
+                <div class="Notes" id="Note">
+                    <p>Notes:</p>
+                    <input type="text" id="Notesinput" placeholder="Place any notes here."> 
+                </div>
             </div>
         </div>
 
@@ -45,12 +47,23 @@
             <div class="Copypastareview">
                 <div id="tmepType">Template for: N/A</div>
                 <p id="TemplatePar">
-                    • Game: <a class="CPGameName" id="CPGameN"></a> <br>
-                    • Host: <a class="CPHost" id="CPHostA"></a> <br>
+                    • Game: <a id="CPGameN"></a> <br>
+                    • Host: <a id="CPHostA"></a> <br>
                     • Co-Hosts: <a id="CHP">@Gamenight Engagement Team </a> <br>
                     • Link: <a href="" id="GL"></a> <br>
                     <a id="NoPre">• Notes: <a id="CPNo"></a></a> <a id="NewBreak"></a>
                     <a id="CHPA">@Commissioned Agent</a>
+                </p>
+                <p id="TempPost">
+                    • IRB Gamenight | <a id="CPGameN2"></a> <br>
+                    • Hosted by: <a  id="CPHostA2"></a> <br>
+                    • Co-hosted by: <a id="Cohostpost"></a> <a id="CohostpostB"></a> <a id="blankCo">N/A</a> <br>
+                    • Supervised by: <a id="superPost"></a> <a id="blankSup">N/A</a> <br>
+                    • Starts at: When enough people join <br>
+                    <br>
+                    • Link to the game: <a href="" id="GL2"></a> <br>
+                    <a id="ExInf">• Extra information: <a id="ExInfVal">Have fun, make friends!</a> </a> <br>
+                    <a id="IEPin">@Imperial Enlisted </a>
                 </p>
                 <button id="CopyButton" onclick="CopyToClip()">Copy To Clipboard</button>
             </div>

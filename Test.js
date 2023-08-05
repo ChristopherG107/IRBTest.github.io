@@ -200,6 +200,7 @@ function RemoveCO(X){
         Supervisor = null
         selectSupervisor.innerHTML = "Select Supervisor"
     }
+    UpdateCopyPaste()
 }
 
 let GameNameFocus = false
@@ -259,7 +260,7 @@ onkeydown = function(e){
 
 
 function UpdateCopyPaste(){
-    document.getElementById("CPGameN").innerHTML = GameName
+    document.getElementById("CPGameN").innerHTML = GameName;
     if (Host){
         document.getElementById("CPHostA").style.display ="inline";
     };
@@ -270,23 +271,77 @@ function UpdateCopyPaste(){
     };
     if (gameLink && Host && GameName){
         document.getElementById('CopyButton').style.display = "inline";
-    }
+    }else{
+        document.getElementById('CopyButton').style.display = "none";
+    };
     document.getElementById("CPHostA").innerHTML = "@"+ Host.Name;
     document.getElementById("GL").innerHTML = gameLink;
     document.getElementById("GL").href = gameLink;
     document.getElementById("CPNo").innerHTML = Notesinput;
+    //===========================================\\
+    document.getElementById("CPGameN2").innerHTML = GameName;
+    document.getElementById("CPHostA2").innerHTML = "@"+ Host.Name;
+    if (Host){
+        document.getElementById("CPHostA2").style.display ="inline";
+    };
+    if (CoHostA){
+        document.getElementById("blankCo").style.display = "none";
+        document.getElementById("Cohostpost").style.display = "inline";
+        document.getElementById("Cohostpost").innerHTML = "@" + CoHostA.Name;
+    }else{
+        document.getElementById("blankCo").innerHTML = "N/A";
+        document.getElementById("blankCo").style.display = "inline";
+        document.getElementById("Cohostpost").style.display = "none";
+    };
+    if (CoHostB){
+        document.getElementById("CohostpostB").style.display = "inline";
+        document.getElementById("CohostpostB").innerHTML = "@" + CoHostB.Name;
+    }else{
+        document.getElementById("CohostpostB").style.display = "none";
+    };
+    if (Supervisor){
+        document.getElementById("superPost").style.display = "inline";
+        document.getElementById("blankSup").style.display = "none";
+        document.getElementById("superPost").innerHTML = "@" + Supervisor.Name;
+    }else{
+        document.getElementById("superPost").style.display = "none";
+        document.getElementById("blankSup").style.display = "inline";
+    };
+    if(Notesinput){
+        document.getElementById("ExInfVal").innerHTML = Notesinput;
+    }else{
+        document.getElementById("ExInfVal").innerHTML = "Have fun, make friends!";
+    };
+    document.getElementById("GL2").innerHTML = gameLink;
+    document.getElementById("GL2").href = gameLink;
+    
 }
 //Display In order
 function DisplayP2(){
     const shout = document.querySelector(".P1Shout");
-    CopyType = "Shout"
-    shout.id = "disabaled"
-    const P2 = document.getElementById("P2")
+    const post = document.querySelector(".P1Post");
+    CopyType = "Shout";
+    post.id = "";
+    shout.id = "disabaled";
+    const P2 = document.getElementById("P2");
     P2.style.display = "flex";
-    document.getElementById('tmepType').innerHTML = "Template for: Shout"
+    document.getElementById('tmepType').innerHTML = "Template for: Shout";
     document.getElementById('TemplatePar').style.display = "inline";
-    
+    document.getElementById('TempPost').style.display = "none";
 }
+function PostP2(){
+    const post = document.querySelector(".P1Post");
+    const shout = document.querySelector(".P1Shout");
+    CopyType = "Post";
+    post.id = "disabaled";
+    shout.id = "";
+    const P2 = document.getElementById("P2");
+    P2.style.display = "flex";
+    document.getElementById('tmepType').innerHTML = "Template for: Post";
+    document.getElementById('TemplatePar').style.display = "none";
+    document.getElementById('TempPost').style.display = "inline";
+}
+
 
 function CopyToClip(){
     console.log(Host.ID.toString())
@@ -295,7 +350,33 @@ function CopyToClip(){
 • Host: <@${Host.ID}> 
 • Co-Hosts: <@&1041632584427376650> 
 • Link: ${gameLink}
-<@&1105668148260253746>`)};
+<@&1105668148260253746>`)
+    }else if (CopyType == "Post"){
+        let coTemplate
+        if(CoHostA){
+            if (CoHostB){
+                coTemplate = "<@"+CoHostA.ID+"> <@"+CoHostB.ID+">"
+            }else{
+                coTemplate = "<@"+CoHostA.ID+">"
+            };
+        }else{
+            coTemplate = "N/A"
+        };
+        let EInfo
+        if (Notesinput){
+            EInfo = Notesinput
+        }else{
+            EInfo = "Have fun, make friends!"
+        };
+        navigator.clipboard.writeText(`IRB Gamenight | ${GameName}
+• Hosted by: <@${Host.ID}>
+• Co-hosted by: ${coTemplate}
+• Starts at: When enough people join
+        
+• Link to the game: ${gameLink}
+• Extra information: ${EInfo}
+<@&865445689035325451>`)
+    };
 
 };
 
