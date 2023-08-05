@@ -7,44 +7,75 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>The Galactic Empire: Imperial Relations Bureau</h1>
-
-    <div class="select-template">
-        <button id="gns" onclick="LoadShout()">Gamenight: Shout<div></div></button>
-        <button id="gnp" onclick="LoadPost()">Gamenight: Post <div></div></button>
-        <button id="gnl" onclick="LoadLog()">Gamenight: Log <div></div></button>
-    </div>
-
-    <div class="Holder">
-        <div class="CopyPastetemp">
-            <div id="line1"></div>
-            <div id="line2"></div>
-            <div id="line3"></div>
-            <div id="line4"></div>
-            <div id="line5"></div>
-            <div id="line6"></div>
-            <div id="line7"></div>
-            <div id="line8"></div>
-            <div id="line9"></div>
-        </div>
-    
-        <div class="SelectionZone">
-            <div class="dropdown">
-                <button class="dropbtn" id="host">Select host.</button>
-                <div class="dropdown-content" id="a">
-                </div>
+    <div class="title"> <a id="Bold">IRB:&nbsp</a>Gamenight Engagement Team</div>
+    <div class="inner-website">
+        <div class="preview-holder">
+            <div class="phaseone">
+                <button onclick="DisplayP2()" class="P1Shout">Shout</button>
+                <button>Post</button>
+                <button>Log</button>
             </div>
-        
-            <div class="dropdown">
-                <button class="dropbtn" id="cohost">Select Co-host.</button>
-                <div class="dropdown-content" id="b">
-                </div>
+            <div class="phasetwo" id="P2">
+                <p>Host: <a class="hosttext" id="HostUser"></a></p>
+                <button class="HostSelectButton">Select Host</button>
             </div>
+            <div class="phasethree" id="opt1">
+                <p>Co-Host: <button class="Cohosttext1" id="CoHostUserA" onclick="RemoveCO('A')"></button><button class="Cohosttext2" id="CoHostUserB" onclick="RemoveCO('B')"></button></p>
+                <button class="CoHostSelectButton">Select Co-Host</button>
+            </div>
+            <div class="SupervisorPhase" id="opt2">
+                <p>Supervisor: <button class="supbut" id="SupUser" onclick="RemoveCO('C')"></button></p>
+                <button class="SupSelectButton">Select Supervisor</button>
+            </div>
+            <div class="phasefour" id="P4">
+                <p>Game Name:</p>
+                <input type="text" id="gameName" placeholder="Enter the game Name"> 
+            </div>
+            <div class="phasefive" id="P5">
+                <p>Game Link:</p>
+                <input type="text" id="gameLink" placeholder="Enter the game Link"> 
+            </div>
+            <div class="Notes" id="Note">
+                <p>Notes:</p>
+                <input type="text" id="Notesinput" placeholder="Place any notes here."> 
+            </div>
+        </div>
 
-            <p>Link: (Text Box)</p>
-            <button onclick="CopyToClip()">Copy to clipboard.</button>
+        <div class= "space">
+            <div class="Copypastareview">
+                <div id="tmepType">Template for: N/A</div>
+                <p id="TemplatePar">
+                    • Game: <a class="CPGameName" id="CPGameN"></a> <br>
+                    • Host: <a class="CPHost" id="CPHostA"></a> <br>
+                    • Co-Hosts: <a id="CHP">@Gamenight Engagement Team </a> <br>
+                    • Link: <a href="" id="GL"></a> <br>
+                    <a id="NoPre">• Notes: <a id="CPNo"></a></a> <a id="NewBreak"></a>
+                    <a id="CHPA">@Commissioned Agent</a>
+                </p>
+                <button id="CopyButton" onclick="CopyToClip()">Copy To Clipboard</button>
+            </div>
         </div>
     </div>
+    <dialog class="modal" id="modal">
+        <div class="Intern">
+            <div id="Bold">Intern(s)</div>
+        </div>
+        <div class="JuniorAgent">
+            <div id="Bold">Junior Agent(s)</div>
+        </div>
+        <div class="Agent">
+            <div id="Bold">Agent(s)</div>
+        </div>
+        <div class="SeniorAgent">
+            <div id="Bold">Senior Agent(s)</div>
+        </div>
+        <div class="LeadAgent">
+            <div id="Bold">Lead Agent(s)</div>
+        </div>
+        <div class="Officers">
+            <div id="Bold">Officers</div>
+        </div>
+    </dialog>
     <script src="Test.js"></script>
 </body>
 </html>

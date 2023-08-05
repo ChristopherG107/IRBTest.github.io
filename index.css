@@ -1,127 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
+@font-face {
+    font-family: DiscordFont;
+    src: url(FontStorage/gg-sans-Regular.ttf);
+}
+
+@font-face {
+    font-family: DiscordFontBold;
+    src: url(FontStorage/gg\ sans\ Bold.ttf);
+}
+
+
 body{
-    background-image: url(Picture/Back.jpg);
-    background-size: cover;
-}
-
-h1{
-    margin: auto;
-    width: 50%;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    font-size: 43px;
-}
-
-.select-template{
-    width: 90%;
-    height: 40px;
-    border-radius: 20px;
-    margin: auto;
-    background-color: rgba(31, 29, 29, 70%);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.select-template > button{
-    margin: 10%;
-    width: 150px;
-    height: 28px;
-    background-color: rgba(1, 1, 1, 0);
-    color: gray;
-    border-style: none;
-    transition: color, 1s;
-    display: block;
-}
-
-.select-template > button > div{
-    width: 10%;
-    height: 3px;
-    border-radius: 30px;
-    background-color: rgba(75, 74, 74, 0);
-    margin: auto;
-    margin-top: 5px;
-    visibility: hidden;
+    background-color: rgb(87, 108, 187);
+    font-family: DiscordFont;
     
 }
 
-#gns:hover,#gnp:hover,#gnl:hover{
+
+
+button, input{
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    background-color: rgba(88,101,242,255);
     color: white;
-    transition: color, .5s;
+    border-style: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-#gns:hover > div, #gnp:hover > div, #gnl:hover > div{
-    visibility: visible;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 100);
-    transition: visibility, .5s;
+input::placeholder{
+    color: lightgray;
 }
 
-#gns:active, #gnl:active, #gnp:active{
-    color: rgb(102, 102, 102);
-    transition: color, .25s;
+#disabaled{
+    background-color: rgba(66,74,146,255);
 }
 
-#gns:active > div, #gnp:active > div, #gnl:active > div{
-    background-color: rgba(75, 74, 74, 100);
-    transition: background-color, .25s;
+button:hover{
+    background-color: rgba(74,72,187,255);
 }
 
-.Holder{
-    display: flex;
+#Bold{
+    font-family: DiscordFontBold;
 }
 
-.CopyPastetemp{
-    height: 300px;
-    width: 38%;
-    margin-left: 5%;
-    margin-top: 2%;
-    background-color: rgba(48, 48, 48, 0.6);
-    border-radius: 10%;
-    color: white;
-
+#TemplatePar{
+    line-height: 30px;
 }
 
-.CopyPastetemp > div{
-    font-family:sans-serif;
-    font-weight: bold;
-    width: 60%;
-    margin: auto;
-    height: 20px;
-    padding-top: 12px;
-}
-
-.SelectionZone{
-    height: 300px;
-    width: 38%;
-    margin-left: 5%;
-    margin-top: 2%;
-    background-color: rgba(48, 48, 48, 0.6);
-    border-radius: 10%;
-    color: white;
-}
-
-
-
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 12px 16px;
+a:link{
+    color: rgba(20,168,252,255);
     text-decoration: none;
-    display: block;
 }
 
-.dropdown:hover .dropdown-content{
-    display: block;
+#HostUser, #CoHostUserA, #CoHostUserB, #SupUser, #CPHostA, #CHP, #CHPA{
+    background-color: rgba(88,101,242,.5);
+    padding: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    transition: background-color .3s;
+}
+
+#CHP{
+    background-color: rgba(61,89,105,.5);
+    color: rgba(53,152,217,255);
+}
+#CHPA{
+    background-color: rgba(74,48,41,.5);
+    color: rgba(83,23,21,255);
+}
+
+#CoHostUserA:hover, #CoHostUserB:hover, #SupUser:hover{
+    background-color: rgba(88,101,242,255);
+}
+.hosttext, .Cohosttext1, .Cohosttext2, .supbut, #CPHostA{
+    display: none;
+}
+
+
+.title{
+    font-size: xx-large;
+    padding: 15px;
+    color: white;
+    background-color: rgb(66,69,73);
+    width: 40%;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 35px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+}
+
+.inner-website{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.preview-holder, .space{
+    font-family: DiscordFont;
+    color: white;
+    width: 30%;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#TemplatePar{display: none;}
+#CopyButton{display: none;}
+#NoPre{display: none;} 
+
+.preview-holder, .Copypastareview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(66,69,73);
+    box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Copypastareview{
+    float: right;
+    width: 100%;
+}
+
+
+.phaseone {
+    background-color: rgba(43,45,49,255);
+    width: 80%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+}
+
+.phasetwo, .phasethree, .phasefour, .phasefive, .SupervisorPhase, .Notes{
+    width: 80%;
+    background-color: rgba(43,45,49,255);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+    display: none;
+}
+
+
+
+dialog > div{
+    background-color: rgba(43,45,49,255);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+dialog{
+    background-color:rgb(66,69,73);
+    border-style: none;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    color: white;
+    text-align: center;
+    box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+}
+
+dialog::-webkit-scrollbar{
+    width: 0px;
+}
+
+dialog > div > div{
+    margin-bottom: 10px;
+}
+
+dialog > div > button{
+    margin-bottom: 10px;
 }
