@@ -64,6 +64,10 @@ a:link{
     border-radius: 4px;
     transition: background-color .3s;
 }
+#IEPin{
+    background-color: rgba(61,107,72,0.5);
+    color: rgba(50,179,103,255);
+}
 #CHP{
     background-color: rgba(61,89,105,.5);
     color: rgba(53,152,217,255);
