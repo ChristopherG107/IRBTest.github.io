@@ -55,10 +55,9 @@ let MemberSelection = {
         Rank: "Bureau Captain",
         ID: "936411927473713223"
     }
-
-
-
 }
+
+
 //--End of Temp Code
 
 let CurentSelected = null
@@ -72,21 +71,37 @@ var Notesinput = null
 
 var CopyType = null
 
+var Team = "Roleplay"
+
 const selectHost = document.querySelector('.HostSelectButton')
 const selectCoHost = document.querySelector('.CoHostSelectButton')
 const selectSupervisor = document.querySelector(".SupSelectButton")
+const selectTeamButton = document.querySelector(".TeamSelector")
 const modal = document.querySelector('#modal')
+const modal2 = document.querySelector('#modal2')
+
 selectSupervisor.addEventListener('click', () => {
     modal.showModal();
-    CurentSelected ="Supervisor"
+    CurentSelected = "Supervisor"
+})
+
+selectTeamButton.addEventListener('click', ()=>{
+    modal2.showModal();
+    CurentSelected = "TeamSelection"
 })
 
 selectCoHost.addEventListener('click', () => {
     if (selectCoHost.id != "disabaled"){
-        modal.showModal();
-        CurentSelected = "CoHost"
+        if (Team = "Roleplay"){
+            modal.showModal();
+            CurentSelected = "CoHost"
+        }else{
+            modal.showModal();
+            CurentSelected = "CoHost"
+        }
+        
     }
-})
+})              
 
 selectHost.addEventListener('click', () => {
     modal.showModal();
@@ -157,8 +172,11 @@ function CloseModal(X){
         Y.style.display = "inline";
         document.querySelector('#SupUser').innerHTML = "@"+ X.Name;
         Supervisor = X;
+    }else if(CurentSelected == "TeamSelection"){
+        console.log(X)
     };
     modal.close();
+    modal2.close();
     document.getElementById("opt1").style.display = "flex";
     document.getElementById("opt2").style.display = "flex";
     document.getElementById("P4").style.display = "flex";
@@ -166,7 +184,6 @@ function CloseModal(X){
 }
 
 function RemoveCO(X){
-    
     if(X == "A"){
         if(CoHostB == null){
             CoHostA = null

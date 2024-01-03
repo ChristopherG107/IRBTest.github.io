@@ -54,7 +54,6 @@ a:link{
     color: rgba(20,168,252,255);
     text-decoration: none;
 }
-
 #HostUser, #CoHostUserA, #CoHostUserB, #SupUser, #CPHostA, #CHP, #CHPA, #CPHostA2, #Cohostpost, #CohostpostB, 
 #superPost, #IEPin{
     background-color: rgba(88,101,242,.5);
@@ -135,7 +134,7 @@ a:link{
 }
 
 
-.phaseone {
+.phaseone{
     background-color: rgba(43,45,49,255);
     width: 80%;
     padding: 10px;
@@ -145,9 +144,10 @@ a:link{
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 4px 5px rgba(25, 25, 25, 0.1);
+    display: none;
 }
 
-.phasetwo, .phasethree, .phasefour, .phasefive, .SupervisorPhase, .Notes{
+.phasetwo, .phasethree, .phasefour, .phasefive, .SupervisorPhase, .Notes, .SelectTeam{
     width: 80%;
     background-color: rgba(43,45,49,255);
     padding: 10px;
@@ -162,7 +162,9 @@ a:link{
     display: none;
 }
 
-
+.SelectTeam{
+    display: flex;
+}
 
 dialog > div{
     background-color: rgba(43,45,49,255);

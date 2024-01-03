@@ -11,6 +11,10 @@
     <div class="inner-website">
         <div class="ExtraSpace">
             <div class="preview-holder">
+                <div class="SelectTeam">
+                    <p>Team: </p>
+                    <button class="TeamSelector">Select Your Team</button>
+                </div>
                 <div class="phaseone">
                     <button onclick="DisplayP2()" class="P1Shout">Shout</button>
                     <button onclick="PostP2()" class="P1Post">Post</button>
@@ -87,6 +91,12 @@
         </div>
         <div class="Officers">
             <div id="Bold">Officers</div>
+        </div>
+    </dialog>
+    <dialog id="modal2">
+        <div class="PingsShout">
+            <Button onclick="CloseModal('GET')">GET</Button>
+            <button onclick="CloseModal('RPM')">RP&M</button>
         </div>
     </dialog>
     <script src="Test.js"></script>
